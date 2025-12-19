@@ -1,0 +1,61 @@
+# ======================
+# Python
+# ======================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env/
+.env.*
+.venv/
+
+# ======================
+# Flask / Runtime
+# ======================
+instance/
+*.log
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# ======================
+# Migrations / Cache
+# ======================
+migrations/__pycache__/
+
+# ======================
+# OS junk
+# ======================
+.DS_Store
+Thumbs.db
+
+# ======================
+# IDE / Editor
+# ======================
+.vscode/
+.idea/
+*.swp
+
+# ======================
+# Node / Frontend (if colocated)
+# ======================
+node_modules/
+dist/
+build/
+
+# ======================
+# Testing / Coverage
+# ======================
+.coverage
+htmlcov/
+.pytest_cache/
+
+# ======================
+# Misc
+# ======================
+.envrc
