@@ -1,0 +1,21 @@
+name: Keep Render Backend Alive (Randomized)
+
+on:
+  schedule:
+    - cron: "*/20 * * * *"   # every 20 minutes
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Random delay
+        run: |
+          DELAY_MINUTES=$((RANDOM % 20 + 1))
+          echo "Sleeping for $DELAY_MINUTES minutes..."
+          sleep $((DELAY_MINUTES * 60))
+
+      - name: Ping backend
+        run: |
+          curl -s https://your-backend.onrender.com/health > /dev/null
