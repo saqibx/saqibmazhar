@@ -18,4 +18,4 @@ jobs:
 
       - name: Ping backend
         run: |
-          curl -fsS https://your-backend.onrender.com/health > /dev/null
+          curl S https://saqibmazhar.onrender.com/api/projects > /dev/null || true
