@@ -15,7 +15,8 @@ def create_app():
     CORS(
         app,
         origins=[
-            "https://saqibmazhar.vercel.app",
+            "https://www.saqibmazhar.com",
+            "https://saqibmazhar.com",
             "http://localhost:3000",
         ],
         allow_headers=["Content-Type", "Authorization"],
