@@ -12,7 +12,16 @@ def create_app():
     app.config.from_object(Config)
     app.url_map.strict_slashes = False
 
-    CORS(app)
+    CORS(
+        app,
+        origins=[
+            "https://saqibmazhar.vercel.app",
+            "http://localhost:3000",
+        ],
+        allow_headers=["Content-Type", "Authorization"],
+        methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+        supports_credentials=True,
+    )
     db.init_app(app)
     jwt.init_app(app)
 
